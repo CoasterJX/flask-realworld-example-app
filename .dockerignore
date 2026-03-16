@@ -1,0 +1,16 @@
+.git
+.python-version
+Dockerfile
+.dockerignore
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+env/
+venv/
+.idea
+.circleci
+.travis.yml
+tests/
