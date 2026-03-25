@@ -16,5 +16,6 @@ COPY . /app/
 
 # Use the port assigned by Cloud Run
 ENV PORT 8080
+ENV DATABASE_URL sqlite:////tmp/conduit.db
 
 CMD python init_db.py && exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 autoapp:app
