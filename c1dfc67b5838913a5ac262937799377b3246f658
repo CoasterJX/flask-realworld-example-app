@@ -1,0 +1,38 @@
+.python-version
+  e32d5aef11ad1f60 1
+Procfile
+  e32d5aef11ad1f60 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.19",
+  "base_commit_sha": "c1dfc67b5838913a5ac262937799377b3246f658",
+  "prompts": {
+    "18c228090f18d55f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "89216b71-f93c-4f9e-bd3a-e9a45942d9c6",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 12,
+      "total_deletions": 0,
+      "accepted_lines": 12,
+      "overriden_lines": 0
+    },
+    "e32d5aef11ad1f60": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "d380794d-fa2d-4994-bc87-902fc7111e51",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 24,
+      "total_deletions": 3,
+      "accepted_lines": 23,
+      "overriden_lines": 0
+    }
+  }
+}
