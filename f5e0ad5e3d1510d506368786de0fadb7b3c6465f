@@ -1,0 +1,23 @@
+Dockerfile
+  114882ebcd53c20e 19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.19",
+  "base_commit_sha": "f5e0ad5e3d1510d506368786de0fadb7b3c6465f",
+  "prompts": {
+    "114882ebcd53c20e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "9d680922-0b51-4112-8ea3-c06bec508ceb",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
