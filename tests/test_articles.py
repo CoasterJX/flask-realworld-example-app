@@ -48,12 +48,10 @@ class TestArticleViews:
             'Authorization': 'Token {}'.format(token)
         })
 
-        resp = testapp.post(url_for('articles.favorite_an_article',
-                                    slug=resp1.json['article']['slug']),
-                            headers={
-                                'Authorization': 'Token {}'.format(token)
-                            }
-                           )
+        resp = testapp.post(
+            url_for('articles.favorite_an_article', slug=resp1.json['article']['slug']),
+            headers={'Authorization': 'Token {}'.format(token)}
+        )
         assert resp.json['article']['favorited']
 
     def test_get_articles_by_favoriter(self, testapp, user):
