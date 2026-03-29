@@ -52,7 +52,7 @@ class TestArticleViews:
                                     slug=resp1.json['article']['slug']),
                             headers={
                                 'Authorization': 'Token {}'.format(token)
-                                }
+                            }
                            )
         assert resp.json['article']['favorited']
 
