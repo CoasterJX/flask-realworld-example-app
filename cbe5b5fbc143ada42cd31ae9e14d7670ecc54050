@@ -1,0 +1,56 @@
+Dockerfile
+  f4cd13fc51d16f3a 1,14,20,23-24
+  21a111acf0eebdf7 2-13,15-19,21-22
+init_db.py
+  f4cd13fc51d16f3a 6-8
+conduit/articles/views.py
+  f4cd13fc51d16f3a 129-130
+cloudbuild.yaml
+  f4cd13fc51d16f3a 1-53
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.19",
+  "base_commit_sha": "cbe5b5fbc143ada42cd31ae9e14d7670ecc54050",
+  "prompts": {
+    "21a111acf0eebdf7": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "7133fac1-dbfc-4c2e-aa59-384cdcc724e6",
+        "model": "gemini-3-flash-preview"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 30,
+      "total_deletions": 0,
+      "accepted_lines": 19,
+      "overriden_lines": 0
+    },
+    "88800384b92f5bb1": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "b02c2fc5-b77b-4c2d-ac61-78c19557c9e1",
+        "model": "gemini-3-flash-preview"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 2,
+      "total_deletions": 0,
+      "accepted_lines": 2,
+      "overriden_lines": 0
+    },
+    "f4cd13fc51d16f3a": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "d04167b7-29bc-4616-aaec-f1991de68f51",
+        "model": "gemini-3-flash-preview"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 65,
+      "total_deletions": 16,
+      "accepted_lines": 63,
+      "overriden_lines": 0
+    }
+  }
+}
