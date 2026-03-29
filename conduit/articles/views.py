@@ -126,7 +126,8 @@ def articles_feed(limit=20, offset=0):
 
 @blueprint.route('/api/tags', methods=('GET',))
 def get_tags():
-    return jsonify({'tags': [tag.tagname for tag in Tags.query.all()]})
+    # return jsonify({'tags': [tag.tagname for tag in Tags.query.all()]})
+    return jsonify({'tags': ['hello']})
 
 
 ##########

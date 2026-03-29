@@ -3,8 +3,9 @@ from conduit.extensions import db
 from conduit.settings import ProdConfig
 import os
 
-# Ensure we use a writable path for SQLite
-os.environ['DATABASE_URL'] = 'sqlite:////tmp/conduit.db'
+# Use existing DATABASE_URL or default to a writable SQLite path
+if 'DATABASE_URL' not in os.environ:
+    os.environ['DATABASE_URL'] = 'sqlite:////tmp/conduit.db'
 
 app = create_app(ProdConfig)
 with app.app_context():

@@ -1,0 +1,53 @@
+steps:
+  # Stage 1: Linting
+  - name: 'python:3.7-slim'
+    id: 'lint'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        pip install flake8
+        flake8 . --exclude=.circleci,.idea
+
+  # Stage 2: Testing
+  - name: 'python:3.7-slim'
+    id: 'test'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        pip install -r requirements/dev.txt
+        pytest
+
+  # Stage 3: Build and Push Docker Image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'build-push'
+    args: ['build', '-t', '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$COMMIT_SHA', '.']
+
+  # Stage 4: Deploy to Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'deploy'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - '$_SERVICE_NAME'
+      - '--image'
+      - '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$COMMIT_SHA'
+      - '--region'
+      - '$_REGION'
+      - '--platform'
+      - 'managed'
+      - '--set-env-vars'
+      - 'DATABASE_URL=sqlite:////tmp/prod.db'
+
+images:
+  - '$_REGION-docker.pkg.dev/$PROJECT_ID/$_REPOSITORY/$_SERVICE_NAME:$COMMIT_SHA'
+
+substitutions:
+  _REGION: us-central1
+  _REPOSITORY: flask-app-repo
+  _SERVICE_NAME: flask-realworld-app
+
+options:
+  logging: CLOUD_LOGGING_ONLY
