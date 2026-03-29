@@ -1,0 +1,23 @@
+tests/test_articles.py
+  f4cd13fc51d16f3a 51-54
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.1.22",
+  "base_commit_sha": "a60f7923bf28631436373c66a94680eefc34893e",
+  "prompts": {
+    "f4cd13fc51d16f3a": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "d04167b7-29bc-4616-aaec-f1991de68f51",
+        "model": "gemini-3-flash-preview"
+      },
+      "human_author": "Jianxi Wang <jianxiwang@google.com>",
+      "messages": [],
+      "total_additions": 4,
+      "total_deletions": 6,
+      "accepted_lines": 4,
+      "overriden_lines": 0
+    }
+  }
+}
