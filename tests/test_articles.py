@@ -3,6 +3,7 @@
 from flask import url_for
 from datetime import datetime
 
+
 class TestArticleViews:
 
     def test_get_articles_by_author(self, testapp, user):
